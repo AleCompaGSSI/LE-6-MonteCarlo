@@ -39,7 +39,7 @@ private:
 
 double random_double( MyRandomInt *rnd ){
     // Returns a random real in [0,1).
-    return (double)rnd->iterate() / ((double)rnd->max + 1.0);
+    return (double)rnd->iterate() / ( (double)rnd->max );
 }
 
 double random_double( double min, double max, MyRandomInt *rnd ){

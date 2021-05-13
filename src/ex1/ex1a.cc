@@ -13,7 +13,7 @@ int main(){
 
     int length = 0;
 
-    while ( n->iterate() % seed != 0 ) lenght++;
+    while ( n->iterate() % seed != 0 ) length++;
 
     std::cout << "The length is: " << length << std::endl;
 

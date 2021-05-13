@@ -13,11 +13,21 @@ int main(){
 
     //for (size_t i = 0; i<10; i++) std::cout << random_double(n) << " " << std::endl ;
 
-    TH1D *h1 = new TH1D("h1", "Iterator distribution", 100, 0, 1);
+    TH1D *h1 = new TH1D("h1", "Iterator distribution", 100, 0, 1 );
 
-    for (size_t i = 0; i < n->max ; i++) h1->Fill( random_double(n) );
+    std::cout << "Filling histogram ... " << std::endl;
 
-    TFile f("histo.root", "new");
+    for (size_t i = 0; i < 1000000 ; i++) h1->Fill( random_double(n) );
+
+    TF1 *f1 = new TF1("Flat distribution"," (1000000.0 / 100.0) ", 0, 1 );
+
+	std::cout << "Chisquare is : " << h1->Chisquare(f1) << std::endl;
+
+    std::cout << "Saving to file ... " << std::endl;
+
+    TFile f("histo1000000.root", "RECREATE");
+
 	h1->Write();
+	f1->Write();
 
 }

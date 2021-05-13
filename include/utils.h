@@ -9,6 +9,7 @@
 #include <vector>
 #include <TGraph.h>
 #include <TH1D.h>
+#include <TF1.h>
 #include <TFile.h>
 
 //Usings
