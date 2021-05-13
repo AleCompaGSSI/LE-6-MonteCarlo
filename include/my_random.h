@@ -27,6 +27,16 @@ private:
 	uint32_t iterator;
 };
 
+class MINSTD: public MyRandomInt{
+public:
+	MINSTD( uint32_t s, uint32_t m, uint32_t a ): MyRandomInt(s), a(a)  { max = m; }
+
+	virtual uint32_t iterate() override { seed = ( a * seed ) % max; return seed; }
+
+private:
+	uint32_t a;
+};
+
 double random_double( MyRandomInt *rnd ){
     // Returns a random real in [0,1).
     return (double)rnd->iterate() / ((double)rnd->max + 1.0);

@@ -8,6 +8,8 @@
 #include <iomanip>
 #include <vector>
 #include <TGraph.h>
+#include <TH1D.h>
+#include <TFile.h>
 
 //Usings
 
