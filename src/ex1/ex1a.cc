@@ -11,11 +11,11 @@ int main(){
 
     NaiveIterator *n = new NaiveIterator(seed, iterator);
 
-    int lenght = 0;
+    int length = 0;
 
     while ( n->iterate() % seed != 0 ) lenght++;
 
-    std::cout << "The lenght is: " << lenght << std::endl;
+    std::cout << "The length is: " << length << std::endl;
 
     //for (size_t i = 0; i<10; i++) std::cout << random_double(n) << " " << std::endl ;
 
