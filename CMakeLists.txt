@@ -14,7 +14,11 @@ include_directories("${CMAKE_SOURCE_DIR}")
 
 include_directories (include)
 
-add_executable(ex1 src/ex1/ex1.cc)
+add_executable(ex1a src/ex1/ex1a.cc)
 
-target_link_libraries(ex1 "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
+target_link_libraries(ex1a "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
+
+add_executable(ex1b src/ex1/ex1b.cc)
+
+target_link_libraries(ex1b "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
 
