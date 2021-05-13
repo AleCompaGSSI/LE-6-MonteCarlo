@@ -22,3 +22,6 @@ add_executable(ex1b src/ex1/ex1b.cc)
 
 target_link_libraries(ex1b "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
 
+add_executable(ex1c src/ex1/ex1c.cc)
+
+target_link_libraries(ex1c "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
