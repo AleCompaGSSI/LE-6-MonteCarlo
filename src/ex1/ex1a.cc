@@ -11,9 +11,9 @@ int main(){
 
     NaiveIterator *n = new NaiveIterator(seed, iterator);
 
-    int length = 0;
+    int length = 1;
 
-    while ( n->iterate() % seed != 0 ) length++;
+    while ( n->iterate() != seed ) length++;
 
     std::cout << "The length is: " << length << std::endl;
 
