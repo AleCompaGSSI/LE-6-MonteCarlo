@@ -11,6 +11,8 @@
 #include <TH1D.h>
 #include <TF1.h>
 #include <TFile.h>
+#include <TCanvas.h>
+#include <TStyle.h>
 
 //Usings
 
