@@ -7,13 +7,14 @@
 void FindMINSTDPeriod ( uint32_t seed ){
 
     uint32_t m = 2147483647;
-    //uint32_t m = 1048575;
+
     uint32_t a = 16807;
+    //uint32_t a = 48271;
 
     MINSTD *rng1 = new MINSTD(seed, m, a);
     MINSTD *rng2 = new MINSTD(seed, m, a);
 
-    //find the loop with the Floyd's tortoise and hare algorithm for cycle detection
+    //find the loop with the Floyd's tortoise and hare algorithm for cycle detection: https://en.wikipedia.org/wiki/Cycle_detection#Tortoise_and_hare
 
     uint32_t n1 = 0;
     uint32_t n2 = 0;
@@ -58,11 +59,9 @@ void FindMINSTDPeriod ( uint32_t seed ){
 
 int main(){
 
-    FindMINSTDPeriod( 1 );
-    FindMINSTDPeriod( 2 );
-    FindMINSTDPeriod( 3 );
     FindMINSTDPeriod( 100046 );
-    FindMINSTDPeriod( 20211305 );
-    FindMINSTDPeriod( 24091996 );
+    FindMINSTDPeriod( 1197483347 );
+    FindMINSTDPeriod( 24061996 );
+    for (uint32_t i = 1; i < 50; i++) FindMINSTDPeriod( i );
 
 }
