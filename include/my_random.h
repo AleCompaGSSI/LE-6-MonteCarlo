@@ -31,7 +31,7 @@ class MINSTD: public MyRandomInt{
 public:
 	MINSTD( uint32_t s, uint32_t m, uint32_t a ): MyRandomInt(s), a(a)  { max = m; }
 
-	virtual uint32_t iterate() override { seed = ( a * seed ) % max; return seed; }
+	virtual uint32_t iterate() override { seed = (uint64_t) a * seed % max; return seed; }
 
 private:
 	uint32_t a;

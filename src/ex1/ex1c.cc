@@ -60,8 +60,8 @@ void FindMINSTDPeriod ( uint32_t seed ){
 int main(){
 
     FindMINSTDPeriod( 100046 );
-    FindMINSTDPeriod( 1197483347 );
+    FindMINSTDPeriod( 1 );
     FindMINSTDPeriod( 24061996 );
-    for (uint32_t i = 1; i < 50; i++) FindMINSTDPeriod( i );
+    //for (uint32_t i = 1; i < 50; i++) FindMINSTDPeriod( i );
 
 }
