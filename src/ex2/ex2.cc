@@ -24,7 +24,7 @@ void rejection(std::uniform_real_distribution<double> distr, std::mt19937 mt){
         do{
             x = -1.0 + 2.0 * distr(mt);
             y = -1.0 + 2.0 * distr(mt);
-        } while ((x*x + y*x) < 1.0);
+        } while ((x*x + y*y) < 1.0);
     }
 }
 
