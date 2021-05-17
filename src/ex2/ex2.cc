@@ -5,7 +5,7 @@
 #include <random>
 #include <iostream>
 
-void inversion(std::uniform_real_distribution<double> distr, std::mt19937 mt){
+void inversion(std::uniform_real_distribution<double> &distr, std::mt19937 mt){
     Timer timer;
     double x,y;
     for( size_t i = 0; i<100000; i++){
@@ -17,14 +17,16 @@ void inversion(std::uniform_real_distribution<double> distr, std::mt19937 mt){
     }
 }
 
-void rejection(std::uniform_real_distribution<double> distr, std::mt19937 mt){
+void rejection(std::uniform_real_distribution<double> &distr, std::mt19937 &mt){
     Timer timer;
     double x,y;
     for( size_t i = 0; i<100000; i++){
-        do{
+        while(true){
             x = -1.0 + 2.0 * distr(mt);
             y = -1.0 + 2.0 * distr(mt);
-        } while ((x*x + y*y) < 1.0);
+            if((x*x + y*y) < 1.0) continue;
+            break;
+        }
     }
 }
 
