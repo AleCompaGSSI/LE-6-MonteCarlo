@@ -18,7 +18,8 @@ void plot_graph(int N, double x[], double y[]){
     gr->GetYaxis()->SetLabelSize(0.05);
 
     gr->SetTitle("#pi vs. MC estimate");
-    gr->GetXaxis()->SetRangeUser(5,10000);
+    gr->GetXaxis()->SetRangeUser(1,10000);
+    gr->GetYaxis()->SetRangeUser(-0.2,0.2);
 
 
     gr->Draw("AL");
