@@ -42,3 +42,11 @@ target_link_libraries(ex3b "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
 add_executable(ex3c src/ex3/ex3c.cc)
 
 target_link_libraries(ex3c "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
+
+add_executable(ex4a src/ex4/ex4a.cc)
+
+target_link_libraries(ex4a "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
+
+add_executable(ex4b src/ex4/ex4b.cc)
+
+target_link_libraries(ex4b "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
