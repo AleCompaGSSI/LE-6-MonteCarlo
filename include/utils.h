@@ -7,8 +7,10 @@
 #include <functional>
 #include <iomanip>
 #include <vector>
+#include <algorithm>
 #include <TGraph.h>
 #include <TH1D.h>
+#include <TH1I.h>
 #include <TF1.h>
 #include <TFile.h>
 #include <TCanvas.h>

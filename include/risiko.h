@@ -15,7 +15,7 @@ int throw_attack( std::uniform_int_distribution<int> &distr, std::mt19937 &mt, i
     for( size_t i = 0; i < attackerArmies; i++) attack.push_back( distr(mt) );
     for( size_t i = 0; i < defenderArmies; i++) defense.push_back( distr(mt) );
 
-    std::sort( attack.begin(),  attack.end(), std::greater<int>() );
+    std::sort( attack.begin(),  attack.end(),  std::greater<int>() );
     std::sort( defense.begin(), defense.end(), std::greater<int>() );
 
     int won = 0;
@@ -29,7 +29,7 @@ int throw_attack( std::uniform_int_distribution<int> &distr, std::mt19937 &mt, i
     return won;
 }
 
-bool attack_kamchatka( int attackerArmies, int defenderArmies ){
+int attack_kamchatka( int attackerArmies, int defenderArmies ){
 
     std::random_device rd;
     std::mt19937 mt(rd());
@@ -45,8 +45,9 @@ bool attack_kamchatka( int attackerArmies, int defenderArmies ){
 
 	}
 
-    if ( defenderArmies < 1 ) { return true; }
-        else { return false; }
+    //if ( defenderArmies < 1 ) { return attackerArmies; }
+    //    else { return 0; }
+    return ( attackerArmies > 0 ) ? attackerArmies : 0;
 
 }
 
