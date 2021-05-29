@@ -45,8 +45,6 @@ int attack_kamchatka( int attackerArmies, int defenderArmies ){
 
 	}
 
-    //if ( defenderArmies < 1 ) { return attackerArmies; }
-    //    else { return 0; }
     return ( attackerArmies > 0 ) ? attackerArmies : 0;
 
 }

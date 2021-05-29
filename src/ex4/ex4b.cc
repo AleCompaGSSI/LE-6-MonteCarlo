@@ -5,8 +5,9 @@
 
 int main(){
 
-    int N = 10000;
-    int armies = 12;
+    const int N = 10000;
+    const int armies = 12;
+
     int tot_won = 0;
     int tot_desirable_outcome = 0;
 
@@ -14,13 +15,12 @@ int main(){
 
 
     for(size_t i = 0; i < N; i++) {
+        
         int left_armies = risiko::attack_kamchatka( armies, 3 );
         if ( left_armies > 0 ) tot_won++;
-        if (left_armies > 5 ) tot_desirable_outcome++;
+        if ( left_armies > 5 ) tot_desirable_outcome++;
         h->Fill(left_armies);
         
-        
-
     }
 
     std::cout << "Win rate with " << armies << " armies : " << (double) tot_won / N << std::endl;
