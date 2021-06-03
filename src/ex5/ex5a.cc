@@ -44,9 +44,4 @@ int main(){
     h->Draw();
     c->Print("hist_integral.pdf");
 
-
-
-
-
-
 }
