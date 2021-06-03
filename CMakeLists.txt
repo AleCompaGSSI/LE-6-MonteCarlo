@@ -58,3 +58,7 @@ target_link_libraries(ex5a "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
 add_executable(ex6 src/ex6/ex6.cc)
 
 target_link_libraries(ex6 "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
+
+add_executable(ex7 src/ex7/ex7.cc)
+
+target_link_libraries(ex7 "${ROOT_LIBRARIES}" "-Wl -lSpectrum")
