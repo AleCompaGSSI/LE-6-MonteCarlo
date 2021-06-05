@@ -77,6 +77,8 @@ std::vector<std::shared_ptr<Photon>> release_residual_energy( double U, TVector3
 
 std::vector<std::shared_ptr<Particle>> photoelectric(  std::shared_ptr<Photon> gamma_in, double U, std::mt19937 &mt ){
 
+    //Sample the photoelectric effect of a photon on lead
+
     //calculate step length based on the total cross section
 
     std::uniform_real_distribution<double> distr(0.0,1.0);
