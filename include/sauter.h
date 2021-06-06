@@ -85,7 +85,7 @@ std::vector<std::shared_ptr<Particle>> photoelectric(  std::shared_ptr<Photon> g
 
     double rho_Pb = 11.34; // g/cm3
     double N_A_A = 0.0029; // (cm2/g) / (cm^2/atom) * 10-24
-    double sigma_E_tot = 2.37e1; // b / Atom
+    double sigma_E_tot = 2.37e1; // b / Atom (PLACEHOLDER VALUE FOR E_gamma = 1 MeV!)
 
     double mu_E = rho_Pb * N_A_A * sigma_E_tot; // cm-1
 
