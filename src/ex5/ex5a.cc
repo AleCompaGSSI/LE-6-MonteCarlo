@@ -26,14 +26,14 @@ double sample_integral( int n, int histories, std::uniform_real_distribution<dou
 int main(){
 
     const int N = 1;
-    const int histories = 1000;
+    const int histories = 240000;
     const int samples = 1000;
 
     std::random_device rd;
     std::mt19937 mt(rd());
     std::uniform_real_distribution<double> distr(0.0,1.0);
 
-    TH1D *h = new TH1D("h", "N=1;#MC - #th;Counts", 50, -0.1, 0.1);
+    TH1D *h = new TH1D("h", "N=1;#MC - #th;Counts", 50, -0.01, 0.01);
 
     for(size_t i = 0; i < samples ; i++) h->Fill(sample_integral( N, histories, distr, mt ));
 
