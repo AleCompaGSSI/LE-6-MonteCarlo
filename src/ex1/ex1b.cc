@@ -3,8 +3,11 @@
 #include "my_random.h"
 
 #include <iostream>
+#include <TApplication.h>
 
-int main(){
+int main(Int_t argc, Char_t** argv){
+
+     TApplication theApp("App", &argc, argv);
 
     uint32_t seed = 987654321;
     uint32_t iterator = 663608941;
@@ -40,7 +43,8 @@ int main(){
     gStyle->SetOptStat(0);
     h1->Draw();
     f1->Draw("SAME");
-    c->Print("hist.pdf");
-
+    theApp.Run();
+    //c->Print("hist.pdf");
+    return 0;
 
 }
