@@ -27,8 +27,7 @@ double rejection(std::uniform_real_distribution<double> &distr, std::mt19937 &mt
         while(true){
             x = -1.0 + 2.0 * distr(mt);
             y = -1.0 + 2.0 * distr(mt);
-            if((x*x + y*y) < 1.0) continue;
-            break;
+            if((x*x + y*y) < 1.0) break;
         }
         sum += x + y;
     }
