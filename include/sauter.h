@@ -18,6 +18,15 @@ Double_t distr_root(Double_t *x, Double_t *par){
             *(1+ 0.5 *par[1]*(par[1]-1)*(par[1]-2)*(1-par[0]*x[0]));
 }
 
+Double_t distr_root_new(Double_t *x, Double_t *par){
+
+    double beta = std::sqrt(par[0]*(par[0] + 2*m_e)) / (par[0] + m_e);
+    double gamma = 1 + (par[0] / m_e);
+
+    return par[1]*(1- x[0]*x[0])/std::pow(1-beta*x[0],4) 
+            *(1+ 0.5 *gamma*(gamma-1)*(gamma-2)*(1-beta*x[0]));
+}
+
 double distr_max(double dx, double beta, double gamma){
 
     double max = 0;

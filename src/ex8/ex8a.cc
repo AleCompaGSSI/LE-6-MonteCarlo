@@ -16,7 +16,7 @@ int main(){
     double beta = std::sqrt(E_e*(E_e + 2*m_e)) / (E_e + m_e);
     double gamma = 1 + (E_e / m_e);
 
-    std::cout <<"Beta :" << beta << ", Gamma :" << gamma << std::endl;
+    std::cout <<"Beta :" << beta << ", Gamma :" << gamma << ", E_e :" << E_e << std::endl;
 
     TH1D *h = new TH1D("h", "Electron distr. N=5000, direction = (0,0,1);cos(#theta);Counts", 500, -1.0, 1.0);
 
@@ -24,8 +24,8 @@ int main(){
     
     for(size_t i = 0; i < N; i++) h->Fill(sauter::sample_cos_theta(beta,gamma, mt));
 
-    TF1 *f1 = new TF1("f1", sauter::distr_root, -1.0, 1.0, 3);
-    f1->SetParameters(0.9,2, 500000);
+    TF1 *f1 = new TF1("f1", sauter::distr_root_new, -1.0, 1.0, 3);
+    f1->SetParameters(2, 50);
     h->Fit("f1");
 
     TCanvas *c = new TCanvas();
